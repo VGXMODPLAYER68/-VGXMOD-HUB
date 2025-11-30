@@ -1,4 +1,3 @@
-
 --[[
 
 
@@ -11,6 +10,7 @@
                           HAVE FUN DONT BE A GAY
 
 ]]
+
 getgenv().PlaceId = game.PlaceId
 
 getgenv().Games = {
@@ -47,16 +47,20 @@ getgenv().Games = {
     ["Deadly Delivery"] = {
         IDs = {93044798454681, 125810438250765},
         Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Deadly%20delivery.lua"
+    },
+
+    ["Pass The Bomb"] = {
+        IDs = {2961583129},
+        Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Pass%20the%20Bomb.lua"
     }
 }
 
-getgenv().Supported = false
-
-for name, data in pairs(getgenv().Games) do
-    for _, id in ipairs(data.IDs) do
-        if getgenv().PlaceId == id then
-            getgenv().Supported = true
-            loadstring(game:HttpGet(data.Script))()
+getgenv().Supported=false
+for _,g in next,getgenv().Games do
+    for _,id in next,g.IDs do
+        if id==getgenv().PlaceId then
+            getgenv().Supported=true
+            loadstring(game:HttpGet(g.Script))()
             break
         end
     end
