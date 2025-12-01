@@ -31,11 +31,16 @@ getgenv().Games = {
 
     ["Flee The Facility"] = {
         IDs = {893973440},
-        Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Flee%20The%20Facility.Lua"
+        Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Flee%20The%20Facility.lua"
     },
 
     ["Dark Deception Hunted"] = {
-        IDs = {102181577519757, 125591428878906, 95211388186571, IDs = {102181577519757, 125591428878906},},
+        IDs = {
+            102181577519757,
+            125591428878906,
+            95211388186571,
+            136431686349723
+        },
         Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Hunted.lua"
     },
 
@@ -55,11 +60,12 @@ getgenv().Games = {
     }
 }
 
-getgenv().Supported=false
-for _,g in next,getgenv().Games do
-    for _,id in next,g.IDs do
-        if id==getgenv().PlaceId then
-            getgenv().Supported=true
+getgenv().Supported = false
+
+for _, g in next, getgenv().Games do
+    for _, id in next, g.IDs do
+        if id == getgenv().PlaceId then
+            getgenv().Supported = true
             loadstring(game:HttpGet(g.Script))()
             break
         end
