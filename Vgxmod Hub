@@ -35,7 +35,7 @@ getgenv().Games = {
     },
 
     ["Dark Deception Hunted"] = {
-        IDs = {102181577519757, 125591428878906},
+        IDs = {102181577519757, 125591428878906, 95211388186571, IDs = {102181577519757, 125591428878906},},
         Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Hunted.lua"
     },
 
