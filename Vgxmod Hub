@@ -57,6 +57,11 @@ getgenv().Games = {
     ["Pass The Bomb"] = {
         IDs = {2961583129},
         Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Pass%20the%20Bomb.lua"
+    },
+
+    ["Mines"] = {
+        IDs = {112279762578792},
+        Script = "https://raw.githubusercontent.com/VGXMODPLAYER68/Vgxmod-Hub/refs/heads/main/Mines.lua"
     }
 }
 
